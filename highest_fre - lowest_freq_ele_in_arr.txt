@@ -1,0 +1,15 @@
+n=int(input())
+l=list(map(int,input().split()))
+d={}
+l2=[]
+l3=[]
+for i in l:
+    d[i]=l.count(i)
+    t=max(d.values())
+    if d[i]==t:
+        l3.append(i)
+    f=min(d.values())
+    if d[i]==f:
+        l2.append(i)
+print(abs(min(l2)-max(l3)))
+
